@@ -1,13 +1,14 @@
-Overview
+##Overview
 This project is a simple Unix shell implementation in C. It supports basic shell functionalities such as executing commands, handling pipes, and maintaining a command history. It also includes a feature to transform a tree-structured command input into a series of piped commands.
 
-Features
+##Features
 Command Execution: Run commands in the shell using execvp.
 Pipes: Handle multiple commands connected by pipes (|).
 Command History: Maintain a history of executed commands and support retrieval of the last command.
 Tree Transformation: Convert a tree-structured command input into a series of piped commands.
 Basic Input Handling: Handle standard input and remove trailing newlines.
-Usage
+
+##Usage
 Compile the Shell
 
 To compile the shell, use gcc:
@@ -26,7 +27,8 @@ Exit the Shell: Type exit and press Enter.
 Show History: Type hist and press Enter to display the history of executed commands.
 Repeat Last Command: Type !! to repeat the last command executed.
 Tree Command Transformation: Prefix a command with Tree to transform a tree-structured input into piped commands.
-Pipes
+
+##Pipes
 
 To execute a series of commands connected by pipes:
 
@@ -37,7 +39,7 @@ For example:
 bash
 ls | grep "txt" | sort
 
-Tree Commands
+##Tree Commands
 
 To use the tree command transformation:
 
@@ -45,10 +47,10 @@ bash
 Tree (cmd1, (cmd2, (cmd3, cmd4)))
 This command structure is parsed into a series of piped commands.
 
-Code Structure
+##Code Structure
 simple_shell.c: The main source file containing the shell implementation.
 
-Functions
+##Functions
 create_node(const char* data): Creates a new tree node with given data.
 free_tree(Node* root): Frees the memory allocated for the tree.
 parse_subtree(const char* arr, int start): Parses a subtree from the input string.
