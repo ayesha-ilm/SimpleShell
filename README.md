@@ -16,3 +16,10 @@ This project is a simple Unix shell implementation in C. It supports basic shell
 To compile the shell, use `gcc`:
 ```bash
 gcc -o simple_shell simple_shell.c
+
+
+### Run the Shell
+Execute the compiled shell:
+
+```bash
+./simple_shell
